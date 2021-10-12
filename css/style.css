@@ -7,3 +7,44 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Navigation */
+
+nav{
+    position:fixed;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    padding:20px 0px;
+    color: #4070f4;
+}
+.container{
+    max-width: 1240px;
+    margin:0 auto;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 20px
+}
+.menu__list{
+    display: flex;
+}
+
+.logo{
+    font-size: 40px;
+    font-weight: 500;
+
+}
+.menu__item{
+    font-size: 18px;
+    font-weight: 500;
+}
+.menu__item+.menu__item{
+    margin-left:12px;
+}
+.media-icons__link{
+    margin:0 6px;
+    color:#4070f4;
+    font-size: 18px;
+}
