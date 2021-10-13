@@ -14,18 +14,27 @@ nav{
     position:fixed;
     width: 100%;
     font-family: 'Ubuntu', sans-serif;
-    padding:20px 0px;
     color: #4070f4;
+    transition: all 0.5s ease;
+}
+nav.sticky{
+    padding:20px 0;
+    background-color:#4070f4;
+    color:#fff;
+}
+.nav.sticky .menu-open__btn{
+    color:#fff;
 }
 .container{
     max-width: 1240px;
     margin:0 auto;
+    padding:0px 20px
 }
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0px 20px
+
 }
 .menu__list{
     display: flex;
@@ -54,10 +63,50 @@ nav{
     font-size: 20px;
     right: 30px;
     top: 20px;
+    display: none;
 }
 .menu-open__btn{
     color: #4070f4;
     display: none;
+}
+/* Home section */
+.home{
+    height: 100vh;
+    width:100%;
+}
+.home__container{
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home__row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.home__title{
+    font-size: 75px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.home__text{
+    font-size: 25px;
+}
+.home__button{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight:600;
+    font-size: 25px;
+    margin-top: 20px;
+    padding:10px 0px;
+    width:150px;
+    background-color: dodgerblue;
+    border-radius: 5px;
+    color:#fff;
+    transition: all 0.5s ease-in;
+}
+.home__button:hover{
+    background-color: floralwhite;
+    color:#000000;
 }
 @media(max-width:750px){
     .menu__list{
@@ -79,6 +128,9 @@ nav{
     .navbar.active .menu__list{
         left:0;
     }
+    .navbar.active .menu-cancel__btn{
+        display: block;
+    }
     .menu__link{
         display: block;
         color:#FFFFFF;
@@ -87,5 +139,26 @@ nav{
     }
     .media-icons__link{
         display: none;
+    }
+    .home__title{
+        font-size: 65px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    .home__text{
+        font-size: 20px;
+    }
+}
+@media(max-width:510px){
+    .home__title{
+        font-size: 45px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+    .home__text{
+        font-size: 15px;
+    }
+    .home__button{
+        font-size: 15px;
     }
 }
