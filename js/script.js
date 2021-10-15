@@ -12,7 +12,13 @@ cancelBtn.addEventListener("click", function () {
     openBtn.style.pointerEvents = "auto";
     navBar.classList.remove('active');
 });
-
+//typing animation script 
+var typed = new Typed(".typing",{
+    strings: ["Front-end developer", "Freelancer"],
+    typeSpeed:80,
+    backSpeed:40,
+    loop:true
+});
 // Sticky navigation menu
 let nav = document.querySelector('nav');
 window.onscroll = function(){
