@@ -16,6 +16,7 @@ nav{
     font-family: 'Ubuntu', sans-serif;
     color: #4070f4;
     transition: all 0.5s ease;
+    padding:10px 0;
 }
 nav.sticky{
     padding:20px 0;
@@ -91,6 +92,11 @@ nav.sticky{
 }
 .home__text{
     font-size: 25px;
+
+}
+.home__text span{
+    color:blueviolet;
+    font-weight: 600;
 }
 .home__button{
     font-family: 'Ubuntu', sans-serif;
