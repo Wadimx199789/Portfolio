@@ -33,12 +33,13 @@ window.onscroll = function(){
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      const lines = entry.target.getC('.line')
+      const lines = entry.target.querySelectorAll('.line')
       lines.forEach(line=>{
         if (entry.isIntersecting) {
             line.classList.add('square');
-            return;
+            return; // если класс добавлен, продолжать уже не надо
           }
+          // перемещение завершено, теперь надо удалить класс
           line.classList.remove('square');
         });
       });
