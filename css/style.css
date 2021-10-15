@@ -200,13 +200,17 @@ nav.sticky{
     transform:translateX(-50%);
 }
 .skills__inner{
+    border-radius: 10px;
+    padding:30px;
     width:60%;
     margin: 0 auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .line{
+    border-radius: 5px;
     width:100%;
     height: 5px;
-    background-color: #808080;
+    background-color: rgb(215, 203, 203);
     position: relative;
 }
 .bars+.bars{
@@ -214,10 +218,21 @@ nav.sticky{
 }
 
 .line::before{
+    border-radius: 5px;
     position:absolute;
     content: "";
     height:100%;
     background-color:#4070f4 ;
+}
+.square{
+    transform: scaleX(0);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform-origin: left;
+}
+@keyframes animate{
+    100%{
+        transform:scaleX(1);
+    }
 }
 .line__html::before{
     width:70%;
