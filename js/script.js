@@ -29,3 +29,19 @@ window.onscroll = function(){
         nav.classList.remove("sticky");
     }
 }
+
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const lines = entry.target.getC('.line')
+      lines.forEach(line=>{
+        if (entry.isIntersecting) {
+            line.classList.add('square');
+            return;
+          }
+          line.classList.remove('square');
+        });
+      });
+      
+  });
+  observer.observe(document.querySelector('.skills__inner'));
