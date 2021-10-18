@@ -108,7 +108,7 @@ nav.sticky{
 
 }
 .home__text span{
-    color:blueviolet;
+    color:rgb(129, 38, 214);
     font-weight: 600;
 }
 .home__button{
@@ -228,6 +228,71 @@ nav.sticky{
     transform: scaleX(0);
     animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
     transform-origin: left;
+}
+/* projects */
+.projects__inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-template-rows: 250px;
+}
+.project{
+    position:relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition-duration:1s;
+    transition: all .6s ease-in-out;
+}
+
+.project:hover{
+    transform: scale(1.2);
+    
+}
+.project::after{
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 100%;
+    left:0;
+    top:0;
+    background-color: rgb(129, 38, 214);
+    opacity: 0.4;
+    transition: all .6s ease-in-out;
+    z-index: 2;
+
+}
+.project:hover::after{
+    opacity: 0;
+    left:-100%;
+}
+.project__img{
+    width: 100%;
+    height: 100%;
+}
+.project__content{
+    display:block;
+    padding-left:30px;
+    padding-top: 80px;
+    position: absolute;
+    top:0;
+    left:0;
+    color:#FFFFFF;
+    z-index:3;
+    width:100%;
+    height: 100%;
+    transition-duration:1s;
+    transition: all .6s ease-in-out;
+}
+.project__content:hover{
+    opacity: 0;
+}
+.project__content-subtitle{
+    padding-left: 60px;
+}
+.project__content-title{
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 @keyframes animate{
     100%{
